@@ -1,8 +1,8 @@
 FROM opensourceway/openeuler:20.09beta
 
+MAINTAINER caozhi1214@gmail.com
+
 WORKDIR /pkgmanage
-
-
 
 COPY openEuler.repo /etc/yum.repos.d/
 COPY conf.yaml ./
