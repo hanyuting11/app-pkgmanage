@@ -16,4 +16,4 @@ COPY redis.conf  /etc/
 RUN dnf clean all
 
 #CMD ["pkgshipd","start"]
-CMD ["/usr/bin/redis-server"]
+#CMD ["/usr/bin/redis-server"]
