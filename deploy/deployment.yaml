@@ -50,6 +50,7 @@ spec:
               pkgship init;
               pkgship update --package;
               pkgship update --issue;
+              redis-server /etc/redis.conf
               sleep infinity
       volumes:
         - name: pkgmanage-config-volume
