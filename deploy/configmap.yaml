@@ -5,48 +5,24 @@ metadata:
   name: packagemanage-config
 data:
   conf.yaml: |
-    - dbname: bringInRely
-      src_db_file: /etc/database/bringInRely_src.sqlite
-      bin_db_file: /etc/database/bringInRely_bin.sqlite
-      lifecycle: enable
-      status: enable
-      priority: 2
     - dbname: fedora30
-      src_db_file: /etc/database/fedora30_src.sqlite
-      bin_db_file: /etc/database/fedora30_bin.sqlite
+      src_db_file: https://mirrors.huaweicloud.com/fedora/releases/30/Everything/source/tree/
+      bin_db_file: https://mirrors.huaweicloud.com/fedora/releases/30/Everything/aarch64/os/
       lifecycle: disable
       status: enable
       priority: 3
-    - dbname: mainline
-      src_db_file: /etc/database/mainline_src.sqlite
-      bin_db_file: /etc/database/mainline_bin.sqlite
+    - dbname: openEuler_20.09
+      src_db_file: https://repo.openeuler.org/openEuler-20.09/source/
+      bin_db_file: https://repo.openeuler.org/openEuler-20.09/everything/aarch64/
       lifecycle: enable
       status: enable
       priority: 1
     - dbname: openEuler_LTS_20.03
-      src_db_file: /etc/database/openEuler-src.sqlite
-      bin_db_file: /etc/database/openEuler-bin.sqlite
+      src_db_file: https://repo.openeuler.org/openEuler-20.03-LTS/source/
+      bin_db_file: https://repo.openeuler.org/openEuler-20.03-LTS/everything/aarch64/
       lifecycle: enable
       status: enable
-      priority: 3
-    - dbname: extras
-      src_db_file: /etc/database/extras_src.sqlite
-      bin_db_file: /etc/database/extras_bin.sqlite
-      lifecycle: enable
-      status: enable
-      priority: 2
-    - dbname: epol
-      src_db_file: /etc/database/epol_src.sqlite
-      bin_db_file: /etc/database/epol_bin.sqlite
-      lifecycle: enable
-      status: enable
-      priority: 2
-    - dbname: factory
-      src_db_file: /etc/database/factory_src.sqlite
-      bin_db_file: /etc/database/factory_bin.sqlite
-      lifecycle: enable
-      status: enable
-      priority: 2
+      priority: 2 
   package.ini: |
     [SYSTEM]
 
