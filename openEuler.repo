@@ -1,6 +1,6 @@
 [openEuler-21.03]
 name=openEuler-21.03
-baseurl=http://119.3.219.20:82/openEuler:/21.03/standard_aarch64/
+baseurl=http://121.36.84.172/dailybuild/openEuler-21.03/openeuler-2021-03-10-14-57-34/everything/aarch64/repodata/
 enabled=1
 gpgcheck=0
 
