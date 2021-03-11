@@ -13,8 +13,8 @@ RUN dnf update -y
 RUN dnf install pkgship-*.rpm -y
 RUN dnf clean all
 
-sh /etc/pkgship/auto_install_pkgship_requires.sh redis
-sh /etc/pkgship/auto_install_pkgship_requires.sh elasticsearch
+RUN sh /etc/pkgship/auto_install_pkgship_requires.sh redis
+RUN sh /etc/pkgship/auto_install_pkgship_requires.sh elasticsearch
 
 #CMD ["pkgshipd","start"]
 #CMD ["/usr/bin/redis-server"]
