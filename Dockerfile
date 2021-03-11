@@ -15,6 +15,6 @@ RUN dnf clean all
 
 RUN sh /etc/pkgship/auto_install_pkgship_requires.sh redis
 RUN sh /etc/pkgship/auto_install_pkgship_requires.sh elasticsearch
-
+RUN su pkgshipuser
 #CMD ["pkgshipd","start"]
 #CMD ["/usr/bin/redis-server"]
