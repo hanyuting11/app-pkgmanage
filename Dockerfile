@@ -1,4 +1,4 @@
-FROM opensourceway/openeuler:20.09beta
+FROM gongzt/openeuler-21.03
 
 MAINTAINER caozhi1214@gmail.com
 
@@ -11,9 +11,10 @@ COPY pkgship-*.rpm ./
 
 RUN dnf update -y
 RUN dnf install pkgship-*.rpm -y
-RUN dnf install redis -y
-COPY redis.conf /etc/
 RUN dnf clean all
+
+sh /etc/pkgship/auto_install_pkgship_requires.sh redis
+sh /etc/pkgship/auto_install_pkgship_requires.sh elasticsearch
 
 #CMD ["pkgshipd","start"]
 #CMD ["/usr/bin/redis-server"]
