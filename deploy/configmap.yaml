@@ -13,7 +13,7 @@ data:
       src_db_file: https://mirrors.huaweicloud.com/fedora/releases/30/Everything/source/tree/
       bin_db_file: https://mirrors.huaweicloud.com/fedora/releases/30/Everything/aarch64/os/
       priority: 3 
-    - dbname: openEuler_LTS_20.03
+    - dbname: openeuler_lts_20.03
       src_db_file: https://repo.openeuler.org/openEuler-20.03-LTS/source/
       bin_db_file: https://repo.openeuler.org/openEuler-20.03-LTS/everything/aarch64/
       priority: 2 
