@@ -1,4 +1,4 @@
-FROM gongzt/openeuler-21.03
+FROM gongzt/openeuler-21.03-x86
 
 MAINTAINER caozhi1214@gmail.com
 
