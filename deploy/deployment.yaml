@@ -35,6 +35,7 @@ spec:
             - |
               bash /etc/pkgship/auto_install_pkgship_requires.sh redis
               bash /etc/pkgship/auto_install_pkgship_requires.sh elasticsearch
+              su pkgshipuser
               pkgshipd start;
               pkgship init;
               sleep infinity
