@@ -14,6 +14,7 @@ RUN dnf install pkgship-*.rpm -y
 RUN dnf install redis -y
 RUN dnf install elasticsearch-7.10.1 -y
 COPY redis.conf /etc/
+COPY auto_setup.sh /etc/
 RUN dnf clean all
 
 #CMD ["pkgshipd","start"]
