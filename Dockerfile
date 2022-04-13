@@ -1,4 +1,4 @@
-FROM openeuler/openeuler:21.03
+FROM openeuler/openeuler:22.03-lts
 
 MAINTAINER caozhi1214@gmail.com
 
@@ -17,6 +17,3 @@ RUN dnf install elasticsearch-7.10.1 -y
 COPY redis.conf /etc/
 COPY auto_setup.sh /etc/
 RUN dnf clean all
-
-#CMD ["pkgshipd","start"]
-#CMD ["/usr/bin/redis-server"]
