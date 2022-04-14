@@ -10,6 +10,9 @@ COPY conf.yaml ./
 COPY pkgship-*.rpm ./
 
 RUN dnf update -y
+RUN pip install APScheduler 
+RUN pip install aiohttp 
+RUN pip install lxml
 RUN dnf install pkgship-*.rpm -y
 RUN dnf remove python3-simplejson -y
 RUN dnf install redis -y
