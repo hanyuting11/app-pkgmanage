@@ -10,6 +10,7 @@ COPY conf.yaml ./
 COPY pkgship-*.rpm ./
 
 RUN dnf update -y
+RUN dnf install python-pip -y
 RUN pip install APScheduler 
 RUN pip install aiohttp 
 RUN pip install lxml
