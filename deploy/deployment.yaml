@@ -36,6 +36,7 @@ spec:
             - /bin/sh
             - -c
             - |
+              chmod +x /etc/auto_setup.sh
               bash /etc/auto_setup.sh
               sleep infinity
       volumes:
