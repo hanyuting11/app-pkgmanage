@@ -10,46 +10,6 @@ data:
       bin_db_file: https://repo.openeuler.org/openEuler-20.03-LTS/everything/aarch64
       priority: 1
 
-    - dbname: openeuler-20.03-lts-sp1
-      src_db_file: https://repo.openeuler.org/openEuler-20.03-LTS-SP1/source
-      bin_db_file: https://repo.openeuler.org/openEuler-20.03-LTS-SP1/everything/aarch64
-      priority: 2
-
-    - dbname: openeuler-20.03-lts-sp2
-      src_db_file: https://repo.openeuler.org/openEuler-20.03-LTS-SP2/source
-      bin_db_file: https://repo.openeuler.org/openEuler-20.03-LTS-SP2/everything/aarch64
-      priority: 3
-
-    - dbname: openeuler-20.09
-      src_db_file: https://repo.openeuler.org/openEuler-20.09/source
-      bin_db_file: https://repo.openeuler.org/openEuler-20.09/everything/aarch64
-      priority: 4
-
-    - dbname: openeuler-21.03
-      src_db_file: https://repo.openeuler.org/openEuler-21.03/source
-      bin_db_file: https://repo.openeuler.org/openEuler-21.03/everything/aarch64
-      priority: 5
-
-    - dbname: openeuler-21.09
-      src_db_file: https://repo.openeuler.org/openEuler-21.09/source
-      bin_db_file: https://repo.openeuler.org/openEuler-21.09/everything/aarch64
-      priority: 6
-
-    - dbname: fedora32
-      src_db_file: https://mirrors.huaweicloud.com/fedora/releases/32/Everything/source/tree/
-      bin_db_file: https://mirrors.huaweicloud.com/fedora/releases/32/Everything/aarch64/os/
-      priority: 7
-      
-    - dbname: fedora33
-      src_db_file: https://mirrors.huaweicloud.com/fedora/releases/33/Everything/source/tree/
-      bin_db_file: https://mirrors.huaweicloud.com/fedora/releases/33/Everything/aarch64/os/
-      priority: 8
-
-    - dbname: fedora34
-      src_db_file: https://mirrors.huaweicloud.com/fedora/releases/34/Everything/source/tree/
-      bin_db_file: https://mirrors.huaweicloud.com/fedora/releases/34/Everything/aarch64/os/
-      priority: 9
-
   package.ini: |
     [SYSTEM]
     ; Configuration file path for data initialization
@@ -136,43 +96,43 @@ data:
 
   timed_task.yaml: |
     - type: synchronous_task
-      scheduler: AsyncIOScheduler
-      tasks:
-        - name: sync_rpm_build
-          trigger: cron
-          day_of_week: 
-          enable: true
-          hour: 
-          minute: '*/10'
-          second: 
-        - name: sync_iso_build
-          trigger: cron
-          day_of_week: 0
-          enable: true
-          hour: 2
-          minute: 0
-          second: 0
-        - name: sync_sig
-          trigger: cron
-          day_of_week: 0
-          enable: true
-          hour: 2
-          minute: 0
-          second: 0
-        - name: sync_pull
-          trigger: cron
-          day_of_week: 0
-          enable: true
-          hour: 2
-          minute: 0
-          second: 0
-        - name: sync_version
-          trigger: cron
-          enable: true
-          day_of_week: 0
-          hour: 2
-          minute: 0
-          second: 0
+    scheduler: AsyncIOScheduler
+    tasks:
+      - name: sync_rpm_build
+        trigger: cron
+        day_of_week: 
+        enable: true
+        hour: 
+        minute: '*/10'
+        second: 
+      - name: sync_iso_build
+        trigger: cron
+        day_of_week: 0
+        enable: true
+        hour: 2
+        minute: 0
+        second: 0
+      - name: sync_sig
+        trigger: cron
+        day_of_week: 0
+        enable: true
+        hour: 2
+        minute: 0
+        second: 0
+      - name: sync_pull
+        trigger: cron
+        day_of_week: 0
+        enable: true
+        hour: 2
+        minute: 0
+        second: 0
+      - name: sync_version
+        trigger: cron
+        enable: true
+        day_of_week: 0
+        hour: 2
+        minute: 0
+        second: 0
     - type: send_email_task
       scheduler: AsyncIOScheduler
       tasks:
