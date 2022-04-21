@@ -96,43 +96,43 @@ data:
 
   timed_task.yaml: |
     - type: synchronous_task
-    scheduler: AsyncIOScheduler
-    tasks:
-      - name: sync_rpm_build
-        trigger: cron
-        day_of_week: 
-        enable: true
-        hour: 
-        minute: '*/10'
-        second: 
-      - name: sync_iso_build
-        trigger: cron
-        day_of_week: 0
-        enable: true
-        hour: 2
-        minute: 0
-        second: 0
-      - name: sync_sig
-        trigger: cron
-        day_of_week: 0
-        enable: true
-        hour: 2
-        minute: 0
-        second: 0
-      - name: sync_pull
-        trigger: cron
-        day_of_week: 0
-        enable: true
-        hour: 2
-        minute: 0
-        second: 0
-      - name: sync_version
-        trigger: cron
-        enable: true
-        day_of_week: 0
-        hour: 2
-        minute: 0
-        second: 0
+      scheduler: AsyncIOScheduler
+      tasks:
+        - name: sync_rpm_build
+          trigger: cron
+          day_of_week: 
+          enable: true
+          hour: 
+          minute: '*/10'
+          second: 
+        - name: sync_iso_build
+          trigger: cron
+          day_of_week: 0
+          enable: true
+          hour: 2
+          minute: 0
+          second: 0
+        - name: sync_sig
+          trigger: cron
+          day_of_week: 0
+          enable: true
+          hour: 2
+          minute: 0
+          second: 0
+        - name: sync_pull
+          trigger: cron
+          day_of_week: 0
+          enable: true
+          hour: 2
+          minute: 0
+          second: 0
+        - name: sync_version
+          trigger: cron
+          enable: true
+          day_of_week: 0
+          hour: 2
+          minute: 0
+          second: 0
     - type: send_email_task
       scheduler: AsyncIOScheduler
       tasks:
