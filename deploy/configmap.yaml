@@ -119,13 +119,6 @@ data:
           hour: 2
           minute: 0
           second: 0
-        - name: sync_pull
-          trigger: cron
-          day_of_week: 0
-          enable: true
-          hour: 2
-          minute: 0
-          second: 0
         - name: sync_version
           trigger: cron
           enable: true
