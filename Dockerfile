@@ -11,5 +11,3 @@ COPY redis.conf /etc/
 COPY auto_setup.sh /etc/
 
 RUN dnf update -y && dnf install python-pip pkgship-*.rpm cronie -y && dnf clean all
-
-ENTRYPOINT ["/bin/bash", "/etc/auto_setup.sh"]
