@@ -13,5 +13,3 @@ cat > /var/spool/cron/root <<EOF
 */1 * * * * /bin/bash /etc/pkgship/service-monitor.sh
 0 3 * * * python3 /etc/pkgship/timer_sync
 EOF
-
-sleep infinity
